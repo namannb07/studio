@@ -9,10 +9,10 @@ import type { Recipe } from './types';
 const firebaseConfig = {
   "projectId": "stepchef-yxuz6",
   "appId": "1:571185076885:web:ae3a9852dc6ffe11aed99c",
-  "storageBucket": "stepchef-yxuz6.firebasestorage.app",
+  "storageBucket": "stepchef-yxuz6.appspot.com",
   "apiKey": "AIzaSyB_3zzmUBpP870L7LTC0zizXNg5A_ja2D8",
   "authDomain": "stepchef-yxuz6.firebaseapp.com",
-  "measurementId": "",
+  "measurementId": "G-5G65GXP3P1",
   "messagingSenderId": "571185076885"
 };
 
