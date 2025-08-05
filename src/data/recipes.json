@@ -1,0 +1,56 @@
+[
+  {
+    "id": "dal-tadka",
+    "name": "Dal Tadka",
+    "cuisine": "Indian",
+    "total_time": 30,
+    "thumbnail": "https://placehold.co/600x400.png",
+    "steps": [
+      { "step": "Rinse lentils until water runs clear", "time": 2 },
+      { "step": "Pressure cook lentils with turmeric and salt", "time": 15 },
+      { "step": "Prepare tadka: heat ghee, add cumin, garlic, and chilies", "time": 5 },
+      { "step": "Pour tadka over cooked lentils", "time": 1 },
+      { "step": "Garnish with cilantro and serve hot", "time": 1 }
+    ]
+  },
+  {
+    "id": "paneer-butter-masala",
+    "name": "Paneer Butter Masala",
+    "cuisine": "Indian",
+    "total_time": 45,
+    "thumbnail": "https://placehold.co/600x400.png",
+    "steps": [
+      { "step": "Sauté onions, tomatoes, ginger, and garlic", "time": 10 },
+      { "step": "Blend sautéed mixture into a smooth puree", "time": 5 },
+      { "step": "Cook puree with spices until oil separates", "time": 15 },
+      { "step": "Add cream, kasuri methi, and paneer cubes", "time": 5 },
+      { "step": "Simmer for a few minutes and serve", "time": 5 }
+    ]
+  },
+  {
+    "id": "vegetable-biryani",
+    "name": "Vegetable Biryani",
+    "cuisine": "Indian",
+    "total_time": 60,
+    "thumbnail": "https://placehold.co/600x400.png",
+    "steps": [
+      { "step": "Wash and soak basmati rice", "time": 1 },
+      { "step": "Sauté mixed vegetables with whole spices", "time": 10 },
+      { "step": "Layer partially cooked rice and vegetables", "time": 10 },
+      { "step": "Cook on low heat (dum) for 20 minutes", "time": 20 },
+      { "step": "Garnish with fried onions and mint", "time": 2 }
+    ]
+  },
+  {
+    "id": "chawal",
+    "name": "Chawal",
+    "cuisine": "Indian",
+    "total_time": 15,
+    "thumbnail": "https://placehold.co/600x400.png",
+    "steps": [
+      { "step": "Chawal dhona (Wash rice)", "time": 3 },
+      { "step": "Paani ubalna (Boil water)", "time": 5 },
+      { "step": "Chawal pakana (Cook rice)", "time": 7 }
+    ]
+  }
+]
