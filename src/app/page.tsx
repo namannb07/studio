@@ -35,7 +35,7 @@ export default function Home() {
           )}
         </div>
         <div className="flex justify-center mb-4">
-          <Logo className="w-64" />
+          <Logo />
         </div>
         <p className="text-muted-foreground mt-2 text-lg">Your companion for delicious home-cooked meals.</p>
       </header>

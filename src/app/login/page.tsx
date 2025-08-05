@@ -31,10 +31,10 @@ export default function LoginPage() {
       <Card className="w-full max-w-sm">
         <CardHeader className="text-center space-y-4">
           <div className="flex justify-center">
-            <Logo className="w-48" />
+            <Logo />
           </div>
-          <CardTitle className="text-3xl font-headline">Welcome to CookItUp</CardTitle>
-          <CardDescription>Sign in to continue</CardDescription>
+          <CardTitle className="text-3xl font-headline">Welcome back</CardTitle>
+          <CardDescription>Sign in to continue to CookItUp</CardDescription>
         </CardHeader>
         <CardContent>
           <Button onClick={handleGoogleSignIn} className="w-full">
