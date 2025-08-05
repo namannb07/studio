@@ -1,7 +1,7 @@
 'use client';
 
 import { initializeApp, getApps, getApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from 'firebase/auth';
+import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { getFirestore, collection, getDocs, doc, getDoc, addDoc } from 'firebase/firestore';
 import type { User } from 'firebase/auth';
 import type { Recipe } from './types';
@@ -30,6 +30,8 @@ export {
   signInWithPopup, 
   onAuthStateChanged, 
   signOut,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
   collection,
   getDocs,
   doc,
