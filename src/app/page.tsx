@@ -6,6 +6,7 @@ import { auth, signOut } from '@/lib/firebase';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { Logo } from '@/components/logo';
 
 export default function Home() {
   const { user } = useAuth();
@@ -33,7 +34,9 @@ export default function Home() {
             </Button>
           )}
         </div>
-        <h1 className="font-headline text-5xl md:text-7xl font-bold text-primary">StepChef</h1>
+        <div className="flex justify-center mb-4">
+          <Logo className="w-64" />
+        </div>
         <p className="text-muted-foreground mt-2 text-lg">Your companion for delicious home-cooked meals.</p>
       </header>
       <RecipeList />

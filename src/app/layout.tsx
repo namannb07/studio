@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { AuthProvider } from '@/hooks/use-auth';
 
 export const metadata: Metadata = {
-  title: 'StepChef',
+  title: 'CookItUp',
   description: 'Your companion for delicious home-cooked meals.',
 };
 
