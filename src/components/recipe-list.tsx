@@ -1,17 +1,26 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { Recipe } from '@/lib/types';
 import { Input } from '@/components/ui/input';
 import { RecipeCard } from '@/components/recipe-card';
 import { Search } from 'lucide-react';
+import { getRecipes } from '@/lib/recipes';
+import { Skeleton } from '@/components/ui/skeleton';
 
-interface RecipeListProps {
-  recipes: Recipe[];
-}
-
-export function RecipeList({ recipes }: RecipeListProps) {
+export function RecipeList() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [recipes, setRecipes] = useState<Recipe[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchRecipes = async () => {
+      const fetchedRecipes = await getRecipes();
+      setRecipes(fetchedRecipes);
+      setLoading(false);
+    };
+    fetchRecipes();
+  }, []);
 
   const filteredRecipes = recipes.filter(recipe =>
     recipe.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -31,7 +40,17 @@ export function RecipeList({ recipes }: RecipeListProps) {
         />
       </div>
 
-      {filteredRecipes.length > 0 ? (
+      {loading ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {Array.from({ length: 4 }).map((_, i) => (
+            <div key={i} className="space-y-2">
+              <Skeleton className="h-48 w-full" />
+              <Skeleton className="h-6 w-3/4" />
+              <Skeleton className="h-4 w-1/2" />
+            </div>
+          ))}
+        </div>
+      ) : filteredRecipes.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {filteredRecipes.map(recipe => (
             <RecipeCard key={recipe.id} recipe={recipe} />

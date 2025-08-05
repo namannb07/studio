@@ -10,4 +10,5 @@ export interface Recipe {
   total_time: number; // in minutes
   thumbnail: string;
   steps: RecipeStep[];
+  authorId?: string;
 }
