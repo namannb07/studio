@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { RecipeCard } from '@/components/recipe-card';
 import { Search } from 'lucide-react';
 import { getRecipes } from '@/lib/recipes';
+import { seedDatabase } from '@/lib/seed';
 import { Skeleton } from '@/components/ui/skeleton';
 
 export function RecipeList() {
@@ -14,12 +15,13 @@ export function RecipeList() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchRecipes = async () => {
+    const fetchAndSeed = async () => {
+      await seedDatabase();
       const fetchedRecipes = await getRecipes();
       setRecipes(fetchedRecipes);
       setLoading(false);
     };
-    fetchRecipes();
+    fetchAndSeed();
   }, []);
 
   const filteredRecipes = recipes.filter(recipe =>
@@ -58,7 +60,7 @@ export function RecipeList() {
         </div>
       ) : (
         <div className="text-center py-16">
-          <p className="text-muted-foreground text-lg">No recipes found. Try a different search.</p>
+          <p className="text-muted-foreground text-lg">No recipes found. Try adding one!</p>
         </div>
       )}
     </div>

@@ -1,6 +1,5 @@
 'use client'
 import { RecipeList } from '@/components/recipe-list';
-import { getRecipes } from '@/lib/recipes';
 import { useAuth } from '@/hooks/use-auth';
 import { auth, signOut } from '@/lib/firebase';
 import { Button } from '@/components/ui/button';
